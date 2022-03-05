@@ -26,7 +26,7 @@ public class Detail {
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }
-
+    //
     public Detail() {
     }
 
