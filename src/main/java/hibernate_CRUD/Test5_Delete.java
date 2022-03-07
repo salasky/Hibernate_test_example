@@ -1,12 +1,11 @@
-package hibernate_test;
+package hibernate_CRUD;
 
-import hibernate_test.entity.Employee;
+import hibernate_CRUD.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import java.util.List;
 
-public class Test4_Update {
+public class Test5_Delete {
     public static void main(String[] args) {
         //Создали объект SessionFactory
         try (SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").
@@ -17,8 +16,11 @@ public class Test4_Update {
             //Открытие транзакции
             session.beginTransaction();
 
-            //изменение зарплаты
-           session.createQuery("update from Employee set salary=salary*1.1"+"where department='IT'").executeUpdate();
+            //если есть готовый объект
+/*            Employee employee=session.get(Employee.class,9);
+            session.delete(employee);*/
+
+            session.createQuery("delete Employee "+"WHERE department='IT'").executeUpdate();
 
             //Закрытие транзакции
             session.getTransaction().commit();

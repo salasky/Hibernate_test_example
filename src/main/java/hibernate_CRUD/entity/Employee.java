@@ -1,4 +1,5 @@
-package hibirnate_test2_oneToOne.entity;
+package hibernate_CRUD.entity;
+
 import javax.persistence.*;
 
 //Аннотация @Entity говорит о том, что данный класс будет иметь отображение (будет таблицей) в БД
@@ -7,11 +8,6 @@ import javax.persistence.*;
 @Table(name = "employees")
 public class Employee {
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "details_id")
-
-    //empdetail должен совпадать mappedBy detail
-    private Detail detail;
     //при помощи аннотации @Column необходимо указать к какому столбцу таблицы будет
     //относиться текущее поле
     //@Аннотация id говорит о том, что столбец связанный с данным полем является primary key
@@ -94,13 +90,5 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
-    }
-
-    public Detail getDetail() {
-        return detail;
-    }
-
-    public void setDetail(Detail empdetail) {
-        this.detail = empdetail;
     }
 }

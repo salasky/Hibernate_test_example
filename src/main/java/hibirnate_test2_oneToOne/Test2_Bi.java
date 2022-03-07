@@ -19,7 +19,7 @@ public class Test2_Bi {
             Detail detail=new Detail("NY","85464324","murray@gmail.com");
             session.beginTransaction();
 
-            employee.setEmpdetail(detail);
+            employee.setDetail(detail);
             detail.setEmployee(employee);
 
             session.save(detail);

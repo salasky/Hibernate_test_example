@@ -43,7 +43,7 @@ public class Test1_UNI {
 
             Employee employee=session.get(Employee.class,2);
             System.out.println(employee);
-            System.out.println(employee.getEmpdetail());
+            System.out.println(employee.getDetail());
             session.delete(employee);
 
 
