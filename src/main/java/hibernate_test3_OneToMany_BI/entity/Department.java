@@ -1,6 +1,4 @@
-package hibernate_test3_OneToMany.entity;
-
-import org.springframework.context.annotation.Scope;
+package hibernate_test3_OneToMany_BI.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;

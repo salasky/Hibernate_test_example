@@ -1,8 +1,8 @@
-package hibernate_test3_OneToMany;
+package hibernate_test3_OneToMany_BI;
 
 
-import hibernate_test3_OneToMany.entity.Department;
-import hibernate_test3_OneToMany.entity.Employee;
+import hibernate_test3_OneToMany_BI.entity.Department;
+import hibernate_test3_OneToMany_BI.entity.Employee;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
