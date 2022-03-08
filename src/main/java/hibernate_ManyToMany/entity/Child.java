@@ -32,7 +32,7 @@ public class Child {
     private List<Section> sections;
 
     public void addSection(Section section){
-        if(section==null){
+        if(sections==null){
             sections= new ArrayList<>();
         }
             sections.add(section);

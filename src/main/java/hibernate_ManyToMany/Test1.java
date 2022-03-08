@@ -16,16 +16,21 @@ public class Test1  {
                 addAnnotatedClass(Section.class).buildSessionFactory();){
             session=factory.getCurrentSession();
 
+            Child child1=new Child("Slava",12);
+            Child child2=new Child("Lena",10);
 
+            Section section1=new Section("Swim");
 
+            child1.addSection(section1);
+            child2.addSection(section1);
 
 
 //---------------------------------------------
             session.beginTransaction();
 
-            Child child=session.get(Child.class,1);
-            System.out.println(child);
-            System.out.println(child.getSections());
+            session.persist(child1);
+            session.persist(child2);
+
 
             session.getTransaction().commit();
             System.out.println("Done!");

@@ -1,8 +1,5 @@
 package hibernate_ManyToMany.entity;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
-
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -18,8 +15,7 @@ public class Section {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany
-    @Cascade({CascadeType.SAVE_UPDATE})
+    @ManyToMany(cascade = javax.persistence.CascadeType.ALL)
     @JoinTable(name = "child_section",
             joinColumns = @JoinColumn(name = "section_id"),
             inverseJoinColumns = @JoinColumn(name = "child_id"))
